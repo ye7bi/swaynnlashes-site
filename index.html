@@ -95,6 +95,81 @@
     font-size: 0.9rem;
     color: var(--ink-soft);
   }
+  .service-price {
+    display: block;
+    margin-top: 12px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--taupe-dark);
+  }
+  .price-note {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--taupe-dark);
+    margin: 18px 0 0;
+    font-style: italic;
+  }
+
+  .about {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background: var(--card);
+    border: 1px solid rgba(169, 131, 106, 0.25);
+    border-radius: 18px;
+    padding: 28px;
+  }
+  .about img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid var(--taupe);
+  }
+  .about p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 480px) {
+    .about { flex-direction: column; text-align: center; }
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+  }
+  .info-card {
+    background: var(--card);
+    border: 1px solid rgba(169, 131, 106, 0.25);
+    border-radius: 14px;
+    padding: 24px 22px;
+  }
+  .info-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: 0 0 12px;
+  }
+  .info-card ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+  .info-card li { margin-bottom: 6px; }
+
+  .hygiene {
+    text-align: center;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    max-width: 560px;
+    margin: 0 auto;
+  }
 
   h2.section-title {
     font-family: 'Playfair Display', serif;
@@ -179,22 +254,76 @@
     </section>
 
     <section>
-      <h2 class="section-title">Prestations</h2>
+      <div class="about">
+        <img src="photo.jpg" alt="Technicienne des cils swaynn lashes" width="96" height="96">
+        <p>
+          Je suis en début de parcours dans les extensions de cils, et je prends le temps
+          de bien faire chaque pose, avec sérieux et attention. Comme chaque détail compte,
+          les rendez-vous peuvent être un peu plus longs que la moyenne — merci pour votre
+          confiance pendant cette phase où je peaufine ma technique à chaque cliente.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Prestations &amp; tarifs</h2>
       <p class="section-sub">Un aperçu des poses proposées</p>
       <div class="services">
         <div class="service-card">
           <h3>Cil à cil</h3>
           <p>Un rendu naturel et sur-mesure, extension par extension.</p>
+          <span class="service-price">dès 65 €</span>
         </div>
         <div class="service-card">
           <h3>Volume russe</h3>
           <p>Un regard intense et fourni grâce aux éventails légers.</p>
+          <span class="service-price">dès 90 €</span>
         </div>
         <div class="service-card">
           <h3>Volume mixte</h3>
           <p>L'équilibre entre naturel et volume, pour tous les styles.</p>
+          <span class="service-price">dès 80 €</span>
+        </div>
+        <div class="service-card">
+          <h3>Remplissage</h3>
+          <p>Retouche sous 2 à 3 semaines pour prolonger la pose.</p>
+          <span class="service-price">dès 35 €</span>
         </div>
       </div>
+      <p class="price-note">Tarifs indicatifs, susceptibles d'être ajustés — confirmés au moment de la réservation.</p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Avant &amp; après le rendez-vous</h2>
+      <p class="section-sub">Quelques conseils pour une pose parfaite</p>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Avant votre venue</h3>
+          <ul>
+            <li>Évitez les lentilles de contact ce jour-là</li>
+            <li>Venez démaquillée si possible, sans mascara ni crème (sinon, je nettoie sur place)</li>
+            <li>Évitez le café avant le rendez-vous</li>
+            <li>Prévoyez une tenue confortable, vous serez allongée un moment — des plaids sont à disposition</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>Après votre venue</h3>
+          <ul>
+            <li>Nettoyez vos cils régulièrement avec un produit adapté aux extensions</li>
+            <li>Un coup de brosse chaque matin pour préserver la pose</li>
+            <li>Pas d'eau ni de vapeur pendant 24h</li>
+            <li>Évitez tout contact avec des corps gras</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="hygiene">
+        <strong>Hygiène &amp; confiance —</strong> formée aux règles d'hygiène essentielles pour des prestations
+        en toute sécurité, je travaille toujours dans un environnement propre, désinfecté et avec du matériel
+        nettoyé. Votre confort et votre sécurité passent avant tout.
+      </p>
     </section>
 
     <section>
