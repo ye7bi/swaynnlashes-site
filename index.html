@@ -171,6 +171,23 @@
     margin: 0 auto;
   }
 
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+  }
+  @media (max-width: 480px) {
+    .gallery { grid-template-columns: 1fr 1fr; }
+  }
+
   h2.section-title {
     font-family: 'Playfair Display', serif;
     font-style: italic;
@@ -262,6 +279,16 @@
           les rendez-vous peuvent être un peu plus longs que la moyenne — merci pour votre
           confiance pendant cette phase où je peaufine ma technique à chaque cliente.
         </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Galerie</h2>
+      <p class="section-sub">Quelques aperçus du quotidien de la pose</p>
+      <div class="gallery">
+        <img src="gallery-application.jpg" alt="Pose d'extensions de cils en cours" loading="lazy">
+        <img src="gallery-tray.jpg" alt="Plateau d'extensions de cils" loading="lazy">
+        <img src="gallery-hygiene.jpg" alt="Matériel d'hygiène utilisé pour les prestations" loading="lazy">
       </div>
     </section>
 
